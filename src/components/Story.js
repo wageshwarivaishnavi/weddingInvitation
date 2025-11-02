@@ -5,7 +5,9 @@ function Story () {
     <div id='story' className='story section-padding'>
       <div className='container'>
         <div className='row'>
-          
+            <div className='col-md-12 mb-30'>
+            <span className='oliven-title-meta'>Invitation</span>
+          </div>
           <div className='col-md-5 mb-30'>
              
             <div className='story-img animate-box'>

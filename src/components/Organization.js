@@ -6,7 +6,7 @@ function Organization () {
       <div className='container'>
         <div className='row'>
           <div className='col-md-12 mb-30'>
-            <h2 className='oliven-title'>Vivaha Vaibhavam</h2>
+            <span className='oliven-title-meta'>Vivaha Vaibhavam</span>
           </div>
         </div>
         <div className='row bord-box bg-img' data-background='images/slider.jpg'>
@@ -48,7 +48,9 @@ function Organization () {
           </div>
         </div>
       </div>
+      
     </div>
+    
   )
 }
 
