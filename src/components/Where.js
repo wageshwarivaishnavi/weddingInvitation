@@ -33,7 +33,12 @@ function Where () {
               <p>
                 <i className='ti-location-pin'></i>M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003
               </p>
-              
+              <button 
+                onClick={handleLocationClick}
+                className='location-btn'
+              >
+                <i className='ti-location-pin'></i> Get Directions
+              </button>
             </div>
           </div>
         </div>
