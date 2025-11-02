@@ -47,7 +47,7 @@ function Sidebar () {
           <p>
             Varsha & Vikas wedding
             <br />
-            04,05 March 2025
+            04,05 March 2026
           </p>
         </div>
       </aside>
