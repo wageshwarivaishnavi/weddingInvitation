@@ -26,9 +26,9 @@ function Footer () {
             
             <h2 className='footer-names'>
               <a href='/'>
-                <span className='couple-name'>Varsha</span>
+                <span className='couple-name'>Varsha&nbsp;</span>
                 <span className='ampersand'>&</span>
-                <span className='couple-name'>Vikas</span>
+                <span className='couple-name'>&nbsp;Vikas</span>
               </a>
             </h2>
             

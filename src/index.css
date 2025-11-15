@@ -530,7 +530,7 @@ button {
 }
 
 .footer-heart i {
-  color: #BD945A;
+  color: #BD945A !important;
   font-size: 20px;
   animation: pulse 2s infinite;
 }
@@ -577,8 +577,21 @@ button {
 
 /* ===== Navigation styles ===== */
 .oliven-nav-toggle {
+    position: fixed;
+    left: 15px; /* Keep it left */
+    top: 15px; /* Keep it top */
+    z-index: 9999;
     cursor: pointer;
-    text-decoration: none;
+    opacity: 1;
+    visibility: hidden;
+    padding: 12px 15px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    background: transparent;
+    margin: 0; /* CHANGED - removed margin */
+    border-radius: 0;
+    box-shadow: none;
 }
 .oliven-nav-toggle.active i::before,
 .oliven-nav-toggle.active i::after {
@@ -689,21 +702,26 @@ button {
     .oliven-nav-toggle {
         opacity: 1;
         visibility: visible;
+        left: 15px; /* Fixed position */
+        top: 15px;
     }
 }
 body.slide {
-    overflow-x: hidden;
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
 }
-body.slide #oliven-aside {
+ body.slide #oliven-aside {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-    width: 280px;
     z-index: 1000;
-    position: fixed;
-}
+    overflow-y: auto !important; /* KEEP SCROLLABLE WHEN OPEN */
+    -webkit-overflow-scrolling: touch;
+  }
 body.slide #oliven-main,
 body.slide .oliven-nav-toggle {
     top: 0;
@@ -1207,7 +1225,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .divider-icon {
-  color: #BD945A;
+  color: #BD945A !important;
   font-size: 18px;
   animation: heartbeat 1.5s infinite;
 }
@@ -1444,7 +1462,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .decoration-heart i {
-  color: #fff;
+  color: #fff !important;
   font-size: 24px;
 }
 
@@ -1936,34 +1954,17 @@ body.slide .oliven-nav-toggle {
   letter-spacing: 1px;
 }
 
-.wedding-date-wrapper {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  background: rgba(189, 148, 90, 0.1);
-  border: 2px solid rgba(189, 148, 90, 0.3);
-  border-radius: 50px;
-  padding: 15px 35px;
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
-}
+ .wedding-date-wrapper {
+    padding: 6px 12px !important;
+    gap: 8px !important;
+  }
 
-.wedding-date-wrapper:hover {
-  background: rgba(189, 148, 90, 0.2);
-  border-color: #BD945A;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(189, 148, 90, 0.3);
-}
+
 
 .date-icon {
-  width: 40px;
-  height: 40px;
-  background: #BD945A;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    width: 24px !important;
+    height: 24px !important;
+  }
 
 .date-icon i {
   color: #fff;
@@ -2216,12 +2217,12 @@ body.slide .oliven-nav-toggle {
     margin-left: 0;
   }
   
-  /* Sidebar Mobile */
+  /* Sidebar Mobile - FULL SCREEN */
   #oliven-aside {
-    width: 100%;
-    max-width: 320px;
+    width: 100%; /* CHANGED from 320px to 100% */
+    max-width: 100%; /* CHANGED from 320px to 100% */
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -2229,7 +2230,7 @@ body.slide .oliven-nav-toggle {
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
     background: linear-gradient(135deg, #fdfbf9 0%, #f8f5f2 100%);
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
   
   body.slide #oliven-aside {
@@ -2242,7 +2243,7 @@ body.slide .oliven-nav-toggle {
   }
   
   .sidebar-content {
-    padding: 30px 20px;
+    padding: 30px 20px 40px; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -2272,6 +2273,10 @@ body.slide .oliven-nav-toggle {
     margin: 15px 0;
   }
   
+  .divider-heart {
+    color: #BD945A !important;
+  }
+  
   #oliven-aside .oliven-main-menu {
     flex: 1;
     margin: 20px 0;
@@ -2299,6 +2304,7 @@ body.slide .oliven-nav-toggle {
     padding-top: 30px;
     margin-top: auto;
     border-top: 1px solid rgba(189, 148, 90, 0.2);
+    padding-bottom: 40px;
   }
   
   .footer-text {
@@ -2310,8 +2316,12 @@ body.slide .oliven-nav-toggle {
     font-size: 14px;
   }
   
+  .footer-heart i {
+    color: #BD945A !important;
+  }
+  
   #oliven-aside::-webkit-scrollbar {
-    width: 4px;
+    width: 6px !important;
   }
   
   #oliven-aside::-webkit-scrollbar-track {
@@ -2327,27 +2337,9 @@ body.slide .oliven-nav-toggle {
     background: rgba(189, 148, 90, 0.5);
   }
   
+  /* OVERLAY - NO LONGER NEEDED BUT KEPT FOR BACKUP */
   .sidebar-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
-  }
-  
-  body.slide .sidebar-overlay {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  body.slide {
-    overflow: hidden;
+    display: none !important; /* DISABLED - not needed for fullscreen */
   }
   
   .oliven-nav-toggle {
@@ -2359,26 +2351,26 @@ body.slide .oliven-nav-toggle {
     opacity: 1;
     visibility: visible;
     padding: 12px 15px;
-    background: #BD945A;
     margin: 15px;
-    border-radius: 50%;
-    box-shadow: 0 5px 20px rgba(189, 148, 90, 0.4);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     transition: all 0.3s ease;
   }
   
   .oliven-nav-toggle:hover {
-    background: #a67f4a;
-    box-shadow: 0 8px 25px rgba(189, 148, 90, 0.6);
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   
   .oliven-nav-toggle i {
-    background: #fff;
+    background: #BD945A;
+    height: 2px;
   }
   
   .oliven-nav-toggle i::before,
   .oliven-nav-toggle i::after {
-    background: #fff;
+    background: #BD945A;
+    height: 2px;
   }
   
   .oliven-nav-toggle.active i {
@@ -2389,14 +2381,14 @@ body.slide .oliven-nav-toggle {
     top: 0;
     -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
-    background: #fff;
+    background: #BD945A;
   }
   
   .oliven-nav-toggle.active i::after {
     bottom: 0;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
-    background: #fff;
+    background: #BD945A;
   }
   
   /* Header Mobile */
@@ -2478,6 +2470,7 @@ body.slide .oliven-nav-toggle {
   
   .divider-heart {
     font-size: 20px;
+    color: #BD945A !important;
   }
   
   .scroll-indicator {
@@ -2631,11 +2624,21 @@ body.slide .oliven-nav-toggle {
   }
   
   .wedding-date-wrapper {
-    padding: 12px 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .date-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .date-icon i {
+    font-size: 16px;
   }
   
   .wedding-dates {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .divider-line {
@@ -2685,5 +2688,174 @@ body.slide .oliven-nav-toggle {
   
   .event-card-inner {
     padding: 25px 15px;
+  }
+  
+  .wedding-date-wrapper {
+    padding: 8px 15px;
+  }
+  
+  .wedding-dates {
+    font-size: 14px;
+  }
+}/* Fix Music Control Button Position */
+.music-control {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #BD945A, #a67f4a);
+  border: none;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 8px 25px rgba(189, 148, 90, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.music-control:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(189, 148, 90, 0.6);
+}
+
+.music-control:active {
+  transform: scale(0.95);
+}
+
+.music-control.paused {
+  background: linear-gradient(135deg, #888, #666);
+}
+
+/* Make ALL icons visible */
+.music-control i {
+  position: relative;
+  z-index: 10;
+  color: #fff !important;
+  font-size: 26px !important; /* Force size */
+  display: block !important; /* Force display */
+  line-height: 1;
+}
+
+/* Specific fix for play icon visibility */
+.music-control.paused i.fa-play {
+  font-size: 28px !important;
+  padding-left: 4px; /* Visual centering for play triangle */
+}
+
+/* Animated Music Waves - HIDDEN BY DEFAULT */
+.music-waves {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  gap: 3px;
+  align-items: flex-end;
+  height: 20px;
+  z-index: 5;
+}
+
+/* Show waves only when playing */
+.music-control.playing .music-waves {
+  display: flex;
+}
+
+.wave {
+  width: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  animation: wave-animation 0.8s ease-in-out infinite;
+}
+
+.wave-1 {
+  height: 8px;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  height: 14px;
+  animation-delay: 0.2s;
+}
+
+.wave-3 {
+  height: 10px;
+  animation-delay: 0.4s;
+}
+
+@keyframes wave-animation {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+/* Ripple effect when playing */
+.music-control.playing::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(189, 148, 90, 0.3);
+  animation: ripple 2s infinite;
+  z-index: 1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .music-control {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .music-control i {
+    font-size: 22px !important;
+  }
+  
+  .music-control.paused i.fa-play {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .music-control {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 15px;
+  }
+  
+  .music-control i {
+    font-size: 20px !important;
+  }
+  
+  .music-control.paused i.fa-play {
+    font-size: 22px !important;
   }
 }
