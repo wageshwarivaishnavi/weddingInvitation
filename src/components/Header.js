@@ -22,8 +22,14 @@ function Header () {
       <div className='container'>
         <div className='row'>
           <div className='col-md-12 text-center caption'>
+            {/* Om Namah Shivaya - Top */}
+              <div className='sacred-chant animate-box' data-animate-effect='fadeInDown'>
+                <span className='om-symbol'>ॐ नमः शिवाय</span>
+              </div>
             <div className='hero-content'>
               
+              
+
               {/* Names and Parents Layout */}
               <div className='names-section'>
                 {/* Bride Section */}

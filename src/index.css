@@ -745,7 +745,9 @@ body.slide .oliven-nav-toggle {
 
 .header.parallaxie {
   background: url(./assets/images/1.jpg) center/cover no-repeat fixed;
+  opacity: 120;
 }
+
 
 .hero-overlay {
   position: absolute;
@@ -785,7 +787,7 @@ body.slide .oliven-nav-toggle {
   margin: 0 auto;
   padding: 50px 30px;
   background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -3002,5 +3004,84 @@ body.slide .oliven-nav-toggle {
   
   .parent-names {
     font-size: 14px;
+  }
+}
+/* Sacred Chant - Om Namah Shivaya */
+.sacred-chant {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.om-symbol {
+  font-size: 20px;
+  color: #BD945A;
+  display: block;
+  margin-bottom: 1px;
+  text-shadow: 
+    0 0 20px rgba(233, 143, 18, 0.6),
+    3px 3px 10px rgba(0, 0, 0, 0.8);
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 20px rgba(189, 148, 90, 0.6),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow: 
+      0 0 30px rgba(189, 148, 90, 0.9),
+      0 0 40px rgba(189, 148, 90, 0.5),
+      3px 3px 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.chant-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .sacred-chant {
+    margin-bottom: 5px;
+  }
+  
+  .om-symbol {
+    font-size: 10px;
+  }
+  
+  .chant-text {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .om-symbol {
+    font-size: 12px;
+  }
+  
+  .chant-text {
+    font-size: 18px;
   }
 }
