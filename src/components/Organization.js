@@ -24,12 +24,12 @@ function Organization () {
     {
       number: "03",
       title: "KASI YATRAI",
-      description: "The groom decides to give up worldly pleasures and prepares to go to Kasi to lead the life of an ascetic. The parents and the Guru advise the groom to marry the bride and enter Grahastashrama — the sacred family life.",
+      description: "The groom decides to give up worldly pleasures and prepares to go to Kasi to lead the life of an ascetic. The parents and the Guru advise the groom to marry the bride and enter Grahastashrama (sacred family life).",
       image: ceremony2
     },
     {
       number: "04",
-      title: "THE 'UNJAL' CEREMONY",
+      title: "THE 'OONJAL' CEREMONY",
       description: "The bride and the groom sit on the swing. Friends and relatives display their talent in classical music, providing festivity to the atmosphere. The Unjal (swing) signifies the ups and downs of life.",
       image: ceremony3
     },
