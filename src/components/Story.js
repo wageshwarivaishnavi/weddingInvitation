@@ -61,7 +61,6 @@ function Story () {
                 <h4 className='invitation-heading'>Together is a beautiful place to be.</h4>
                 <p>
                   We feel incredibly blessed to invite you to our wedding celebration.
-                  A beautiful journey of love has brought us to this joyful moment.
                   Your presence will make our big day even more meaningful.
                 </p>
               </div>

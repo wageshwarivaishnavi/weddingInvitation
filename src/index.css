@@ -3085,3 +3085,71 @@ body.slide .oliven-nav-toggle {
     font-size: 18px;
   }
 }
+/* Invitation Message */
+.invitation-message {
+  margin-bottom: 40px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.invite-line-1,
+.invite-line-2,
+.invite-line-3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1.6;
+}
+
+.invite-line-1 {
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 5px;
+}
+
+.invite-line-2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.invite-line-3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #BD945A;
+  margin-bottom: 10px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .invitation-message {
+    margin-bottom: 30px;
+  }
+  
+  .invite-line-1 {
+    font-size: 15px;
+  }
+  
+  .invite-line-2 {
+    font-size: 18px;
+  }
+  
+  .invite-line-3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .invite-line-1 {
+    font-size: 14px;
+  }
+  
+  .invite-line-2 {
+    font-size: 16px;
+  }
+  
+  .invite-line-3 {
+    font-size: 20px;
+  }
+}

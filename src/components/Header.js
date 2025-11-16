@@ -23,12 +23,18 @@ function Header () {
         <div className='row'>
           <div className='col-md-12 text-center caption'>
             {/* Om Namah Shivaya - Top */}
-              <div className='sacred-chant animate-box' data-animate-effect='fadeInDown'>
-                <span className='om-symbol'>ॐ नमः शिवाय</span>
-              </div>
+            <div className='sacred-chant animate-box' data-animate-effect='fadeInDown'>
+              <span className='om-symbol'>ॐ नमः शिवाय</span>
+            </div>
+            
             <div className='hero-content'>
               
-              
+              {/* Invitation Message */}
+              <div className='invitation-message animate-box' data-animate-effect='fadeInUp'>
+            
+                <p className='invite-line-2'>We cordially invite you to celebrate</p>
+                <p className='invite-line-3'>The wedding of</p>
+              </div>
 
               {/* Names and Parents Layout */}
               <div className='names-section'>
