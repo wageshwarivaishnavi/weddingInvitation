@@ -2060,7 +2060,7 @@ body.slide .oliven-nav-toggle {
 .invitation-translate-btn {
   position: absolute;
   top: 15px;
-  right: -5px;
+  right: 10px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
