@@ -13,6 +13,80 @@ function Header () {
     }
   };
 
+  // Add to Calendar functions
+  const addToCalendar = (eventType) => {
+    let title, startDate, endDate, details, location;
+    
+    if (eventType === 'reception') {
+      title = 'Varsha & Vikas - Wedding Reception';
+      startDate = '20260304T180000'; // March 04, 2026, 6:00 PM
+      endDate = '20260304T230000';   // March 04, 2026, 11:00 PM
+      details = 'Join us for the wedding reception of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
+    } else {
+      title = 'Varsha & Vikas - Marriage Ceremony';
+      startDate = '20260305T110000'; // March 05, 2026, 11:00 AM
+      endDate = '20260305T120000';   // March 05, 2026, 12:00 PM
+      details = 'Join us for the wedding ceremony of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
+    }
+
+    // Google Calendar URL
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+    
+    // Open in new tab
+    window.open(googleCalendarUrl, '_blank');
+  };
+
+  // Download ICS file for Apple Calendar, Outlook, etc.
+  const downloadICS = (eventType) => {
+    let title, startDate, endDate, details, location;
+    
+    if (eventType === 'reception') {
+      title = 'Varsha & Vikas - Wedding Reception';
+      startDate = '20260304T180000';
+      endDate = '20260304T230000';
+      details = 'Join us for the wedding reception of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
+    } else {
+      title = 'Varsha & Vikas - Marriage Ceremony';
+      startDate = '20260305T110000';
+      endDate = '20260305T120000';
+      details = 'Join us for the wedding ceremony of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
+    }
+
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:${startDate}
+DTEND:${endDate}
+SUMMARY:${title}
+DESCRIPTION:${details}
+LOCATION:${location}
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR`;
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = `${eventType}-varsha-vikas.ics`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Show calendar options
+  const handleEventCardClick = (eventType) => {
+    if (window.confirm('Add to Calendar?\n\nClick OK for Google Calendar\nClick Cancel to download for Apple/Outlook')) {
+      addToCalendar(eventType);
+    } else {
+      downloadICS(eventType);
+    }
+  };
+
   return (
     <header
       id='home'
@@ -31,7 +105,6 @@ function Header () {
               
               {/* Invitation Message */}
               <div className='invitation-message animate-box' data-animate-effect='fadeInUp'>
-            
                 <p className='invite-line-2'>We cordially invite you to celebrate</p>
                 <p className='invite-line-3'>The wedding of</p>
               </div>
@@ -74,21 +147,47 @@ function Header () {
                 Together Forever, From This Day Forward
               </p>
 
-              {/* Event details cards */}
+              {/* Event details cards - NOW CLICKABLE */}
               <div className='event-cards'>
-                <div className='event-card animate-box' data-animate-effect='fadeInUp'>
+                <div 
+                  className='event-card animate-box' 
+                  data-animate-effect='fadeInUp'
+                  onClick={() => handleEventCardClick('reception')}
+                  role='button'
+                  tabIndex='0'
+                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('reception')}
+                >
                   <div className='event-card-inner'>
+                    <div className='calendar-icon-badge'>
+                      <i className='ti-calendar'></i>
+                    </div>
                     <h3 className='event-title'>Reception</h3>
                     <div className='event-date'>March 04, 2026</div>
                     <div className='event-time'>6:00 PM onwards</div>
+                    <div className='add-calendar-hint'>
+                      <i className='ti-plus'></i> Add to Calendar
+                    </div>
                   </div>
                 </div>
 
-                <div className='event-card animate-box' data-animate-effect='fadeInUp'>
+                <div 
+                  className='event-card animate-box' 
+                  data-animate-effect='fadeInUp'
+                  onClick={() => handleEventCardClick('ceremony')}
+                  role='button'
+                  tabIndex='0'
+                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('ceremony')}
+                >
                   <div className='event-card-inner'>
+                    <div className='calendar-icon-badge'>
+                      <i className='ti-calendar'></i>
+                    </div>
                     <h3 className='event-title'>Marriage Ceremony</h3>
                     <div className='event-date'>March 05, 2026</div>
                     <div className='event-time'>11:00 AM - 12:00 PM</div>
+                    <div className='add-calendar-hint'>
+                      <i className='ti-plus'></i> Add to Calendar
+                    </div>
                   </div>
                 </div>
               </div>
