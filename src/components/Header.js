@@ -178,7 +178,7 @@ END:VCALENDAR`;
               <p className='hero-subtitle animate-box' data-animate-effect='fadeInUp'>
                 {isInvitationTamil 
                   ? 'இன்று முதல் என்றென்றும் ஒன்றாக'
-                  : 'Together Forever, From This Day Forward'
+                  : 'Together Forever, From This Day'
                 }
               </p>
 
@@ -230,7 +230,7 @@ END:VCALENDAR`;
                       {isInvitationTamil ? 'மார்ச் 05, 2026' : 'March 05, 2026'}
                     </div>
                     <div className='event-time'>
-                      {isInvitationTamil ? 'காலை 11:00 - 12:00' : '11:00 AM - 12:00 PM'}
+                      {isInvitationTamil ? 'காலை 10:30 - 12:00' : '10:30 AM - 12:00 PM'}
                     </div>
                     <div className='add-calendar-hint'>
                       <i className='ti-plus'></i> {isInvitationTamil ? 'காலண்டரில் சேர்க்க' : 'Add to Calendar'}
