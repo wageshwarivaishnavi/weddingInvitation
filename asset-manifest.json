@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/weddingWeb/static/css/main.fa09da64.css",
+    "main.js": "/weddingWeb/static/js/main.184a1a51.js",
+    "static/media/12.jpg": "/weddingWeb/static/media/12.7a2e6987d48d69c89aaf.jpg",
+    "static/media/10.jpg": "/weddingWeb/static/media/10.4a02e022c86f6dbec23c.jpg",
+    "static/media/9.jpg": "/weddingWeb/static/media/9.f6cf9d33ea9db03e95d6.jpg",
+    "static/media/7.jpg": "/weddingWeb/static/media/7.bed0aa70b32f65d9d2d9.jpg",
+    "static/media/8.jpg": "/weddingWeb/static/media/8.8a351548ceab8459d686.jpg",
+    "static/media/6.jpg": "/weddingWeb/static/media/6.2446cd6e326b1885bf64.jpg",
+    "static/media/4.jpg": "/weddingWeb/static/media/4.a73d51fcfb0ec67d34ec.jpg",
+    "static/media/11.jpg": "/weddingWeb/static/media/11.dcf432c04d8c80a227dc.jpg",
+    "static/media/1.jpg": "/weddingWeb/static/media/1.4178ee5758f2cd1fe15b.jpg",
+    "static/media/2.jpg": "/weddingWeb/static/media/2.1efc27fcde85ee4bbe1d.jpg",
+    "static/media/AajSeTeri.mp3": "/weddingWeb/static/media/AajSeTeri.883ebfbfbd1762b19b32.mp3",
+    "static/media/krishFarms.png": "/weddingWeb/static/media/krishFarms.55c8fc786dc7fbd0df5b.png",
+    "static/media/3.jpg": "/weddingWeb/static/media/3.96a077477c09e14e43ed.jpg",
+    "static/media/5.jpg": "/weddingWeb/static/media/5.85462e18c5699f2533fe.jpg",
+    "static/media/ceremony 6.png": "/weddingWeb/static/media/ceremony 6.f5616e15f68796724e5e.png",
+    "static/media/ceremony 7.png": "/weddingWeb/static/media/ceremony 7.dde296b76da389b12e23.png",
+    "static/media/ceremony 2.png": "/weddingWeb/static/media/ceremony 2.5aef18c002a01edc59b2.png",
+    "static/media/ceremony 4.png": "/weddingWeb/static/media/ceremony 4.f69fc95c16f2324f4964.png",
+    "static/media/ceremony 3.png": "/weddingWeb/static/media/ceremony 3.3d253d8da7f19ab88c9a.png",
+    "static/media/ceremony 1.png": "/weddingWeb/static/media/ceremony 1.570f856bf23311ef31b5.png",
+    "static/media/ceremony 8.png": "/weddingWeb/static/media/ceremony 8.1c595ba9cf7063938de5.png",
+    "static/media/ceremony 5.png": "/weddingWeb/static/media/ceremony 5.7b4f5589e446384ed85b.png",
+    "static/media/location.png": "/weddingWeb/static/media/location.e50f2040bc4a91306fe8.png",
+    "index.html": "/weddingWeb/index.html",
+    "main.fa09da64.css.map": "/weddingWeb/static/css/main.fa09da64.css.map",
+    "main.184a1a51.js.map": "/weddingWeb/static/js/main.184a1a51.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa09da64.css",
+    "static/js/main.184a1a51.js"
+  ]
+}
