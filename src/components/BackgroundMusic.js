@@ -12,10 +12,13 @@ const BackgroundMusic = () => {
 
     audio.volume = 0.5;
 
-    // Try autoplay
+    // Try autoplay but do not preload the audio to avoid network cost.
     const tryAutoplay = () => {
-      if (autoplayAttemptedRef.current) return; // Don't try multiple times
+      if (autoplayAttemptedRef.current) return;
       autoplayAttemptedRef.current = true;
+
+      // Defer loading until play attempt
+      if (!audio.src) audio.src = weddingSong;
 
       audio.play()
         .then(() => {
@@ -24,22 +27,21 @@ const BackgroundMusic = () => {
         })
         .catch(() => {
           console.log('Autoplay blocked, waiting for user interaction');
-          
-          // Play on first interaction (click, touch, OR scroll)
+
           const playOnce = () => {
+            if (!audio.src) audio.src = weddingSong;
             audio.play()
               .then(() => setIsPlaying(true))
               .catch(err => console.log(err));
-            
-            // Remove all listeners
+
             document.removeEventListener('click', playOnce);
             document.removeEventListener('touchstart', playOnce);
             document.removeEventListener('scroll', playOnce);
           };
-          
+
           document.addEventListener('click', playOnce, { once: true });
           document.addEventListener('touchstart', playOnce, { once: true });
-          document.addEventListener('scroll', playOnce, { once: true }); // ✅ Added scroll
+          document.addEventListener('scroll', playOnce, { once: true });
         });
     };
 
@@ -54,6 +56,8 @@ const BackgroundMusic = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
+    if (!audio.src) audio.src = weddingSong;
+
     if (audio.paused) {
       audio.play()
         .then(() => setIsPlaying(true))
@@ -66,9 +70,7 @@ const BackgroundMusic = () => {
 
   return (
     <>
-      <audio ref={audioRef} loop preload="auto" playsInline>
-        <source src={weddingSong} type="audio/mpeg" />
-      </audio>
+      <audio ref={audioRef} loop playsInline preload="none" />
 
       <div
         className={`music-control ${isPlaying ? 'playing' : 'paused'}`}

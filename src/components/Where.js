@@ -1,6 +1,7 @@
 import { useState } from "react";
-import where1 from "../assets/images/location.png";
-import krishFarmsLogo from "../assets/images/krishFarms.png";
+import React from "react";
+import where1 from "../assets/images/location.webp";
+import krishFarmsLogo from "../assets/images/krishFarms.webp";
 
 function Where() {
   const [isHovering, setIsHovering] = useState(false);
@@ -64,6 +65,7 @@ function Where() {
                     src={where1}
                     alt="Krrish Farms Location"
                     className="location-map"
+                    loading="lazy"
                   />
                   <div className="map-border-glow"></div>
                 </div>
@@ -85,6 +87,7 @@ function Where() {
                       src={krishFarmsLogo}
                       alt="Krrish Farms"
                       className="venue-logo"
+                      loading="lazy"
                     />
                   </div>
                   <div className="logo-glow"></div>

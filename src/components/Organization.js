@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import ceremony1 from "../assets/images/ceremony 1.png";
-import ceremony2 from "../assets/images/ceremony 2.png";
-import ceremony3 from "../assets/images/ceremony 3.png";
-import ceremony4 from "../assets/images/ceremony 4.png";
-import ceremony5 from "../assets/images/ceremony 5.png";
-import ceremony6 from "../assets/images/ceremony 6.png";
-import ceremony7 from "../assets/images/ceremony 7.png";
-import ceremony8 from "../assets/images/ceremony 8.png";
+import ceremony1 from "../assets/images/ceremony 1.webp";
+import ceremony2 from "../assets/images/ceremony 2.webp";
+import ceremony3 from "../assets/images/ceremony 3.webp";
+import ceremony4 from "../assets/images/ceremony 4.webp";
+import ceremony5 from "../assets/images/ceremony 5.webp";
+import ceremony6 from "../assets/images/ceremony 6.webp";
+import ceremony7 from "../assets/images/ceremony 7.webp";
+import ceremony8 from "../assets/images/ceremony 8.webp";
 
 function Organization() {
   const [translations, setTranslations] = useState({});
@@ -117,6 +117,7 @@ function Organization() {
                   src={ceremony.image}
                   alt={ceremony.title}
                   className="ceremony-image"
+                  loading="lazy"
                 />
                 <div className="image-border-effect"></div>
               </div>

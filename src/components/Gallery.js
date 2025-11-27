@@ -6,18 +6,18 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 
-import gallery1 from '../assets/images/1.jpg'
-import gallery2 from '../assets/images/2.jpg'
-import gallery3 from '../assets/images/3.jpg'
-import gallery4 from '../assets/images/4.jpg'
-import gallery5 from '../assets/images/5.jpg'
-import gallery6 from '../assets/images/6.jpg'
-import gallery7 from '../assets/images/7.jpg'
-import gallery8 from '../assets/images/8.jpg'
-import gallery9 from '../assets/images/9.jpg'
-import gallery10 from '../assets/images/10.jpg'
-import gallery11 from '../assets/images/11.jpg'
-import gallery12 from '../assets/images/12.jpg'
+import gallery1 from '../assets/images/1.webp'
+import gallery2 from '../assets/images/2.webp'
+import gallery3 from '../assets/images/3.webp'
+import gallery4 from '../assets/images/4.webp'
+import gallery5 from '../assets/images/5.webp'
+import gallery6 from '../assets/images/6.webp'
+import gallery7 from '../assets/images/7.webp'
+import gallery8 from '../assets/images/8.webp'
+import gallery9 from '../assets/images/9.webp'
+import gallery10 from '../assets/images/10.webp'
+import gallery11 from '../assets/images/11.webp'
+import gallery12 from '../assets/images/12.webp'
 
 function Gallery () {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -128,6 +128,7 @@ function Gallery () {
                           src={photo.image} 
                           alt='Engagement moment'
                           className='slider-image'
+                          loading="lazy"
                         />
                         <div className='image-overlay'>
                           <div className='overlay-icon'>
@@ -165,6 +166,7 @@ function Gallery () {
                 src={selectedImage.image} 
                 alt='Engagement moment' 
                 className='lightbox-image'
+                loading="lazy"
               />
             </div>
           </div>

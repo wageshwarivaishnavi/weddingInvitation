@@ -1,13 +1,15 @@
+import React, { Suspense, lazy } from "react";
 import Countdown from "./components/Countdown";
 import Footer from "./components/Footer";
 import BackgroundMusic from "./components/BackgroundMusic";
 import Header from "./components/Header";
-import Organization from "./components/Organization";
 import Sidebar from "./components/Sidebar";
 import Story from "./components/Story";
 import Where from "./components/Where";
-import RSVP from "./components/RSVP";
-import Gallery from "./components/Gallery";
+
+const Organization = lazy(() => import("./components/Organization"));
+const RSVP = lazy(() => import("./components/RSVP"));
+const Gallery = lazy(() => import("./components/Gallery"));
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
         <Header />
         {/* <Organization /> */}
         <Story />
-        <Gallery />
+        <Suspense fallback={<div /> }>
+          <Gallery />
+        </Suspense>
         <Countdown />
 
         <Where />

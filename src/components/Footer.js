@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/images/2.jpg";
+import Logo from "../assets/images/2.webp";
 
 function Footer() {
   return (
@@ -12,7 +12,7 @@ function Footer() {
               <div className="footer-logo">
                 <a href="/">
                   <div className="logo-circle">
-                    <img src={Logo} alt="Wageshwari & Rishab Wedding" />
+                    <img src={Logo} alt="Wageshwari & Rishab Wedding" loading="lazy" />
                   </div>
                 </a>
               </div>

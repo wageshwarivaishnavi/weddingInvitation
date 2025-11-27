@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/images/2.jpg";
+import Logo from "../assets/images/2.webp";
 
 function Sidebar() {
   const [show, setShow] = useState(false);
@@ -32,7 +32,7 @@ function Sidebar() {
           <div className="oliven-logo">
             <a href="/">
               <div className="logo-wrapper">
-                <img src={Logo} alt="Wedding Logo" />
+                <img src={Logo} alt="Wedding Logo" loading="lazy" />
               </div>
               <span className="couple-names">
                 Wageshwari <small className="ampersand">&</small> Rishab

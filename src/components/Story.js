@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import storyImage from "../assets/images/1.jpg";
+import storyImage from "../assets/images/1.webp";
 
 function Story() {
   const [isInvitationTamil, setIsInvitationTamil] = useState(false);
@@ -22,6 +22,7 @@ function Story() {
                 src={storyImage}
                 className="story-main-image"
                 alt="Wageshwari and Rishab"
+                loading="lazy"
               />
             </div>
           </div>

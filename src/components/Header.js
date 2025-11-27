@@ -222,7 +222,7 @@ END:VCALENDAR`;
                       {isInvitationHindi ? "विवाह समारोह" : "Marriage Ceremony"}
                     </h3>
                     <div className="event-date">
-                      {isInvitationHindi ? "05 मार्च, 2026" : "Feb 19, 2026"}
+                      {isInvitationHindi ? "19 फ़रवरी, 2026" : "Feb 19, 2026"}
                     </div>
                     <div className="event-time">
                       {isInvitationHindi
