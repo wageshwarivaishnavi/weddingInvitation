@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Suspense, lazy } from "react";
 import Countdown from "./components/Countdown";
 import Footer from "./components/Footer";
@@ -20,7 +21,7 @@ function App() {
         <Header />
         {/* <Organization /> */}
         <Story />
-        <Suspense fallback={<div /> }>
+        <Suspense fallback={<div />}>
           <Gallery />
         </Suspense>
         <Countdown />
