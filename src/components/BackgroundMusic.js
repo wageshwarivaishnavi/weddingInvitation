@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import weddingSong from '../assets/images/AajSeTeri.mp3';
+import { useState, useEffect, useRef } from "react";
+import weddingSong from "../assets/images/AajSeTeri.mp3";
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,28 +20,30 @@ const BackgroundMusic = () => {
       // Defer loading until play attempt
       if (!audio.src) audio.src = weddingSong;
 
-      audio.play()
+      audio
+        .play()
         .then(() => {
           setIsPlaying(true);
-          console.log('Playing');
+          console.log("Playing");
         })
         .catch(() => {
-          console.log('Autoplay blocked, waiting for user interaction');
+          console.log("Autoplay blocked, waiting for user interaction");
 
           const playOnce = () => {
             if (!audio.src) audio.src = weddingSong;
-            audio.play()
+            audio
+              .play()
               .then(() => setIsPlaying(true))
-              .catch(err => console.log(err));
+              .catch((err) => console.log(err));
 
-            document.removeEventListener('click', playOnce);
-            document.removeEventListener('touchstart', playOnce);
-            document.removeEventListener('scroll', playOnce);
+            document.removeEventListener("click", playOnce);
+            document.removeEventListener("touchstart", playOnce);
+            document.removeEventListener("scroll", playOnce);
           };
 
-          document.addEventListener('click', playOnce, { once: true });
-          document.addEventListener('touchstart', playOnce, { once: true });
-          document.addEventListener('scroll', playOnce, { once: true });
+          document.addEventListener("click", playOnce, { once: true });
+          document.addEventListener("touchstart", playOnce, { once: true });
+          document.addEventListener("scroll", playOnce, { once: true });
         });
     };
 
@@ -59,9 +61,10 @@ const BackgroundMusic = () => {
     if (!audio.src) audio.src = weddingSong;
 
     if (audio.paused) {
-      audio.play()
+      audio
+        .play()
         .then(() => setIsPlaying(true))
-        .catch(err => console.log('Play error:', err));
+        .catch((err) => console.log("Play error:", err));
     } else {
       audio.pause();
       setIsPlaying(false);
@@ -73,10 +76,10 @@ const BackgroundMusic = () => {
       <audio ref={audioRef} loop playsInline preload="none" />
 
       <div
-        className={`music-control ${isPlaying ? 'playing' : 'paused'}`}
+        className={`music-control ${isPlaying ? "playing" : "paused"}`}
         onClick={toggleMusic}
         role="button"
-        aria-label={isPlaying ? 'Pause Music' : 'Play Music'}
+        aria-label={isPlaying ? "Pause Music" : "Play Music"}
       >
         {isPlaying ? (
           <>

@@ -19,7 +19,9 @@ function App() {
       <BackgroundMusic />
       <div id="oliven-main">
         <Header />
-        {/* <Organization /> */}
+        <Suspense fallback={<div />}>
+          <Organization />
+        </Suspense>
         <Story />
         <Suspense fallback={<div />}>
           <Gallery />

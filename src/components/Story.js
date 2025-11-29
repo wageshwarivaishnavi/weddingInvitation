@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import storyImage from "../assets/images/1.webp";
 
 function Story() {
-  const [isInvitationTamil, setIsInvitationTamil] = useState(false);
+  const [isInvitationHindi, setIsInvitationHindi] = useState(false);
 
   return (
     <div id="story" className="story section-padding">
@@ -84,15 +84,15 @@ function Story() {
               <div className="invitation-section">
                 <button
                   className="invitation-translate-btn"
-                  onClick={() => setIsInvitationTamil(!isInvitationTamil)}
+                  onClick={() => setIsInvitationHindi(!isInvitationHindi)}
                   title={
-                    isInvitationTamil ? "Switch to English" : "Switch to Hindi"
+                    isInvitationHindi ? "Switch to English" : "Switch to Hindi"
                   }
                 >
-                  {isInvitationTamil ? "अ" : "A"}
+                  {isInvitationHindi ? "अ" : "A"}
                 </button>
 
-                {isInvitationTamil ? (
+                {isInvitationHindi ? (
                   <>
                     <h4 className="invitation-heading">
                       एक साथ होना एक सुंदर स्थान है।

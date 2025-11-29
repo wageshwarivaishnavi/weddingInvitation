@@ -2425,6 +2425,17 @@ body.slide .oliven-nav-toggle {
   width: 120px;
 }
 
+/* Date styling for ceremonies */
+.ceremony-date {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #bd945a;
+  margin: 8px 0 12px;
+  letter-spacing: 0.6px;
+  text-transform: none;
+}
+
 /* Description */
 .ceremony-description {
   font-family: "Nunito Sans", sans-serif;
