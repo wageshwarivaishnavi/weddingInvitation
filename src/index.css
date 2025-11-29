@@ -857,6 +857,7 @@ body.slide .oliven-nav-toggle {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
+  gap: 20px;
 }
 
 .event-card {

@@ -16,43 +16,47 @@ function Header() {
 
   // Add to Calendar functions
   const addToCalendar = (eventType) => {
-    let title, startDate, endDate, details, location;
-    title = "Wageshwari & Rishab - Marriage Ceremony";
-    startDate = "20260219T110000";
-    endDate = "20260220T120000";
-    details = "Join us for the wedding ceremony of Wageshwari and Rishab";
-    location =
-      "Fly Over Bridge of, Railway Station, Near, Sudarshan Path, Patna Sahib, Nalapar, Kali Asthan, Patna, Bihar 800008";
+    let calenderLink;
 
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      title
-    )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
-      details
-    )}&location=${encodeURIComponent(location)}`;
-
-    window.open(googleCalendarUrl, "_blank");
+    switch (eventType) {
+      case "haldi-marwa":
+        calenderLink = "https://calendar.app.google/9UUuk1HsJqpqSvHo6";
+        break;
+      case "mehndi-sangeet":
+        calenderLink = "https://calendar.app.google/ccDDi1s2LLtrcc5TA";
+        break;
+      default:
+        calenderLink = "https://calendar.app.google/W8ysA3n9YmE2CFg39";
+    }
+    window.open(calenderLink, "_blank");
   };
 
   const downloadICS = (eventType) => {
     let title, startDate, endDate, details, location;
-    title = "Wageshwari & Rishab - Marriage Ceremony";
-    startDate = "20260305T110000";
-    endDate = "20260305T120000";
-    details = "Join us for the wedding ceremony of Wageshwari and Rishab";
     location =
       "Fly Over Bridge of, Railway Station, Near, Sudarshan Path, Patna Sahib, Nalapar, Kali Asthan, Patna, Bihar 800008";
-    const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-DTSTART:${startDate}
-DTEND:${endDate}
-SUMMARY:${title}
-DESCRIPTION:${details}
-LOCATION:${location}
-STATUS:CONFIRMED
-SEQUENCE:0
-END:VEVENT
-END:VCALENDAR`;
+
+    switch (eventType) {
+      case "haldi-marwa":
+        title = "Wageshwari & Rishab - Haldi & Marwa";
+        startDate = "20260217T100000";
+        endDate = "20260217T120000";
+        details = "Haldi & Marwa ceremonies for Wageshwari and Rishab";
+        break;
+      case "mehndi-sangeet":
+        title = "Wageshwari & Rishab - Mehndi & Sangeet";
+        startDate = "20260218T100000";
+        endDate = "20260218T120000";
+        details = "Mehndi and Sangeet celebrations for Wageshwari and Rishab";
+        break;
+      default:
+        title = "Wageshwari & Rishab - Marriage Ceremony";
+        startDate = "20260219T110000";
+        endDate = "20260219T130000";
+        details = "Join us for the wedding ceremony of Wageshwari and Rishab";
+    }
+
+    const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:${startDate}\nDTEND:${endDate}\nSUMMARY:${title}\nDESCRIPTION:${details}\nLOCATION:${location}\nSTATUS:CONFIRMED\nSEQUENCE:0\nEND:VEVENT\nEND:VCALENDAR`;
 
     const blob = new Blob([icsContent], {
       type: "text/calendar;charset=utf-8",
@@ -207,6 +211,76 @@ END:VCALENDAR`;
                 <div
                   className="event-card animate-box"
                   data-animate-effect="fadeInUp"
+                  onClick={() => handleEventCardClick("haldi-marwa")}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={(e) =>
+                    e.key === "Enter" && handleEventCardClick("haldi-marwa")
+                  }
+                >
+                  <div className="event-card-inner">
+                    <div className="calendar-icon-badge">
+                      <i className="ti-calendar"></i>
+                    </div>
+                    <h3 className="event-title">
+                      {isInvitationHindi ? "हल्दी और मरवा" : "Haldi & Marwa"}
+                    </h3>
+                    <div className="event-date">
+                      {isInvitationHindi ? "17 फ़रवरी, 2026" : "Feb 17, 2026"}
+                    </div>
+                    <div className="event-time">
+                      {isInvitationHindi
+                        ? "सुबह 10:00 - 12:00"
+                        : "10:00 AM Onwards"}
+                    </div>
+                    <div className="add-calendar-hint">
+                      <i className="ti-plus"></i>
+                      {isInvitationHindi
+                        ? "कैलेंडर में जोड़ें"
+                        : "Add to Calendar"}
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="event-card animate-box"
+                  data-animate-effect="fadeInUp"
+                  onClick={() => handleEventCardClick("mehndi-sangeet")}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={(e) =>
+                    e.key === "Enter" && handleEventCardClick("mehndi-sangeet")
+                  }
+                >
+                  <div className="event-card-inner">
+                    <div className="calendar-icon-badge">
+                      <i className="ti-calendar"></i>
+                    </div>
+                    <h3 className="event-title">
+                      {isInvitationHindi
+                        ? "मेहंदी और संगीत"
+                        : "Mehndi & Sangeet"}
+                    </h3>
+                    <div className="event-date">
+                      {isInvitationHindi ? "18 फ़रवरी, 2026" : "Feb 18, 2026"}
+                    </div>
+                    <div className="event-time">
+                      {isInvitationHindi
+                        ? "शाम 06:00 - 10:00"
+                        : "06:00 PM Onwards"}
+                    </div>
+                    <div className="add-calendar-hint">
+                      <i className="ti-plus"></i>
+                      {isInvitationHindi
+                        ? "कैलेंडर में जोड़ें"
+                        : "Add to Calendar"}
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="event-card animate-box"
+                  data-animate-effect="fadeInUp"
                   onClick={() => handleEventCardClick("ceremony")}
                   role="button"
                   tabIndex="0"
@@ -230,7 +304,7 @@ END:VCALENDAR`;
                         : "07:00 PM Onwards"}
                     </div>
                     <div className="add-calendar-hint">
-                      <i className="ti-plus"></i>{" "}
+                      <i className="ti-plus"></i>
                       {isInvitationHindi
                         ? "कैलेंडर में जोड़ें"
                         : "Add to Calendar"}
