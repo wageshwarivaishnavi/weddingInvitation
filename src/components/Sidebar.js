@@ -35,7 +35,7 @@ function Sidebar() {
                 <img src={Logo} alt="Wedding Logo" loading="lazy" />
               </div>
               <span className="couple-names">
-                Wageshwari <small className="ampersand">&</small> Rishab
+                Rishab <small className="ampersand">&</small> Wageshwari
               </span>
               <div className="date-divider">
                 <span className="divider-line"></span>
@@ -102,7 +102,7 @@ function Sidebar() {
             <p className="footer-text">
               Join us in celebrating
               <br />
-              <strong>Wageshwari & Rishab</strong>
+              <strong>Rishab & Wageshwari</strong>
               <br />
               <span className="footer-date">19 Feb 2026</span>
             </p>

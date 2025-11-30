@@ -21,7 +21,7 @@ function Story() {
               <img
                 src={storyImage}
                 className="story-main-image"
-                alt="Wageshwari and Rishab"
+                alt="Rishab and Wageshwari"
                 loading="lazy"
               />
             </div>

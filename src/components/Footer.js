@@ -14,7 +14,7 @@ function Footer() {
                   <div className="logo-circle">
                     <img
                       src={Logo}
-                      alt="Wageshwari & Rishab Wedding"
+                      alt="Rishab & Wageshwari Wedding"
                       loading="lazy"
                     />
                   </div>
@@ -30,9 +30,9 @@ function Footer() {
 
             <h2 className="footer-names">
               <a href="/">
-                <span className="couple-name">Wageshwari&nbsp;</span>
+                <span className="couple-name">Rishab&nbsp;</span>
                 <span className="ampersand">&</span>
-                <span className="couple-name">&nbsp;Rishab</span>
+                <span className="couple-name">&nbsp;Wageshwari</span>
               </a>
             </h2>
 
@@ -51,7 +51,7 @@ function Footer() {
             <p className="copyright">
               With love and gratitude
               <br />
-              <span className="year">© 2026 Wageshwari & Rishab</span>
+              <span className="year">© 2026 Rishab & Wageshwari</span>
             </p>
 
             {/* ⭐ Built with Love Section */}

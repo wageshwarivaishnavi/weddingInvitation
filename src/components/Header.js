@@ -38,22 +38,22 @@ function Header() {
 
     switch (eventType) {
       case "haldi-marwa":
-        title = "Wageshwari & Rishab - Haldi & Marwa";
+        title = "Rishab & Wageshwari - Haldi & Marwa";
         startDate = "20260217T100000";
         endDate = "20260217T120000";
-        details = "Haldi & Marwa ceremonies for Wageshwari and Rishab";
+        details = "Haldi & Marwa ceremonies for Rishab and Wageshwari";
         break;
       case "mehndi-sangeet":
-        title = "Wageshwari & Rishab - Mehndi & Sangeet";
+        title = "Rishab & Wageshwari - Mehndi & Sangeet";
         startDate = "20260218T100000";
         endDate = "20260218T120000";
-        details = "Mehndi and Sangeet celebrations for Wageshwari and Rishab";
+        details = "Mehndi and Sangeet celebrations for Rishab and Wageshwari";
         break;
       default:
-        title = "Wageshwari & Rishab - Marriage Ceremony";
+        title = "Rishab & Wageshwari - Marriage Ceremony";
         startDate = "20260219T110000";
         endDate = "20260219T130000";
-        details = "Join us for the wedding ceremony of Wageshwari and Rishab";
+        details = "Join us for the wedding ceremony of Rishab and Wageshwari";
     }
 
     const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:${startDate}\nDTEND:${endDate}\nSUMMARY:${title}\nDESCRIPTION:${details}\nLOCATION:${location}\nSTATUS:CONFIRMED\nSEQUENCE:0\nEND:VEVENT\nEND:VCALENDAR`;
@@ -133,36 +133,6 @@ function Header() {
 
               {/* Names and Parents Layout */}
               <div className="names-section">
-                {/* Bride Section */}
-                <div className="bride-section">
-                  <h1
-                    className="name-text animate-box"
-                    data-animate-effect="fadeInUp"
-                  >
-                    {isInvitationHindi ? "वागेश्वरी" : "Wageshwari"}
-                  </h1>
-                  {isInvitationHindi ? (
-                    <>
-                      <p className="parent-label">कन्या</p>
-                      <p className="parent-names">
-                        स्व. अनिल कुमार और श्रीमती रजनी गुप्ता
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <p className="parent-label">DAUGHTER OF</p>
-                      <p className="parent-names">
-                        Late Anil Kumar & Mrs. Rajani Gupta
-                      </p>
-                    </>
-                  )}
-                </div>
-
-                {/* Ampersand */}
-                <div className="ampersand-wrapper">
-                  <span className="ampersand-large">&</span>
-                </div>
-
                 {/* Groom Section */}
                 <div className="groom-section">
                   <h1
@@ -183,6 +153,35 @@ function Header() {
                       <p className="parent-label">SON OF</p>
                       <p className="parent-names">
                         Mr. Ranjit Kumar Ranjan & Mrs. Rekha Devi
+                      </p>
+                    </>
+                  )}
+                </div>
+
+                {/* Ampersand */}
+                <div className="ampersand-wrapper">
+                  <span className="ampersand-large">&</span>
+                </div>
+                {/* Bride Section */}
+                <div className="bride-section">
+                  <h1
+                    className="name-text animate-box"
+                    data-animate-effect="fadeInUp"
+                  >
+                    {isInvitationHindi ? "वागेश्वरी" : "Wageshwari"}
+                  </h1>
+                  {isInvitationHindi ? (
+                    <>
+                      <p className="parent-label">कन्या</p>
+                      <p className="parent-names">
+                        स्व. अनिल कुमार और श्रीमती रजनी गुप्ता
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="parent-label">DAUGHTER OF</p>
+                      <p className="parent-names">
+                        Late Anil Kumar & Mrs. Rajani Gupta
                       </p>
                     </>
                   )}

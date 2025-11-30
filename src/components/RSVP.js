@@ -87,7 +87,7 @@ function RSVP() {
       `⏰ Time: [Your Wedding Time]%0A%0A` +
       `Looking forward to celebrating with you! 💕%0A%0A` +
       `With love,%0A` +
-      `Wageshwari & Rishab`;
+      `Rishab & Wageshwari`;
 
     const whatsappUrl = `https://wa.me/91${userPhone}?text=${guestMessage}`;
 
@@ -100,7 +100,7 @@ function RSVP() {
   const sendEmailToGuest = async (data) => {
     // Create email content
     const emailSubject = encodeURIComponent(
-      "Wedding RSVP Confirmation - Wageshwari & Rishab"
+      "Wedding RSVP Confirmation - Rishab & Wageshwari"
     );
     const emailBody = encodeURIComponent(
       `Dear ${data.name},\n\n` +
@@ -116,7 +116,7 @@ function RSVP() {
         `We are delighted to have you join us on our special day.\n\n` +
         `Looking forward to celebrating with you!\n\n` +
         `With love,\n` +
-        `Wageshwari & Rishab`
+        `Rishab & Wageshwari`
     );
 
     // Method 1: Using mailto (opens user's email client)
