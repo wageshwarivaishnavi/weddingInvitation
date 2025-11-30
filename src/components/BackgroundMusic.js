@@ -81,18 +81,14 @@ const BackgroundMusic = () => {
         role="button"
         aria-label={isPlaying ? "Pause Music" : "Play Music"}
       >
-        {isPlaying ? (
-          <>
-            <i className="fa fa-music"></i>
-            <span className="music-waves">
-              <span className="wave wave-1"></span>
-              <span className="wave wave-2"></span>
-              <span className="wave wave-3"></span>
-            </span>
-          </>
-        ) : (
-          <i className="fa fa-play"></i>
-        )}
+        <i className="fa fa-music" aria-hidden="true"></i>
+        <i className="fa fa-play" aria-hidden="true"></i>
+
+        <span className="music-waves" aria-hidden="true">
+          <span className="wave wave-1"></span>
+          <span className="wave wave-2"></span>
+          <span className="wave wave-3"></span>
+        </span>
       </div>
     </>
   );

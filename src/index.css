@@ -4054,6 +4054,23 @@ body.slide .oliven-nav-toggle {
   height: 100%;
 }
 
+/* Show only the appropriate icon via state classes */
+.music-control .fa-play {
+  display: none;
+}
+.music-control.paused .fa-play {
+  display: flex !important;
+}
+.music-control.paused .fa-music {
+  display: none !important;
+}
+.music-control.playing .fa-music {
+  display: flex !important;
+}
+.music-control.playing .fa-play {
+  display: none !important;
+}
+
 /* Play icon specific */
 .music-control.paused i.fa-play {
   font-size: 30px !important;
@@ -4066,16 +4083,12 @@ body.slide .oliven-nav-toggle {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  display: flex;
   gap: 3px;
   align-items: flex-end;
   height: 20px;
   z-index: 5;
   pointer-events: none;
-}
-
-.music-control.playing .music-waves {
-  display: flex;
 }
 
 .wave {
@@ -4084,6 +4097,12 @@ body.slide .oliven-nav-toggle {
   border-radius: 3px;
   animation: wave-animation 0.8s ease-in-out infinite;
   pointer-events: none;
+}
+
+/* Muted/paused appearance for waves */
+.music-control.paused .wave {
+  background: rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
 }
 
 .wave-1 {
@@ -4112,7 +4131,7 @@ body.slide .oliven-nav-toggle {
 }
 
 /* Ripple effect */
-.music-control.playing::before {
+.music-control::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4125,6 +4144,11 @@ body.slide .oliven-nav-toggle {
   animation: ripple 2s infinite;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Lighter ripple when paused */
+.music-control.paused::before {
+  background: rgba(128, 128, 128, 0.12);
 }
 
 @keyframes ripple {
