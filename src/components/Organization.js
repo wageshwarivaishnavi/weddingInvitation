@@ -85,7 +85,7 @@ function Organization() {
     },
     {
       number: "07",
-      title: "VIDAII",
+      title: "VIDAAI",
       titleHindi: "विदाई",
       date: "19 February",
       dateHindi: "19 फरवरी",

@@ -230,7 +230,7 @@ function Header() {
                     </div>
                     <div className="event-time">
                       {isInvitationHindi
-                        ? "सुबह 10:00 - 12:00"
+                        ? "सुबह 10:00 बजे से"
                         : "10:00 AM Onwards"}
                     </div>
                     <div className="add-calendar-hint">
@@ -293,14 +293,16 @@ function Header() {
                       <i className="ti-calendar"></i>
                     </div>
                     <h3 className="event-title">
-                      {isInvitationHindi ? "विवाह समारोह" : "Marriage Ceremony"}
+                      {isInvitationHindi
+                        ? "तिलक और विवाह समारोह"
+                        : "Tilak and Marriage Ceremony"}
                     </h3>
                     <div className="event-date">
                       {isInvitationHindi ? "19 फ़रवरी, 2026" : "Feb 19, 2026"}
                     </div>
                     <div className="event-time">
                       {isInvitationHindi
-                        ? "सुबह 10:30 - 12:00"
+                        ? "शाम 7:00 बजे से"
                         : "07:00 PM Onwards"}
                     </div>
                     <div className="add-calendar-hint">
