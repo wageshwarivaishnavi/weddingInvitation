@@ -18,7 +18,7 @@ function Sidebar() {
   return (
     <>
       <a
-        href="/"
+        href="/weddingWeb"
         onClick={openMenu}
         className={`js-oliven-nav-toggle oliven-nav-toggle${
           show ? " active" : ""
@@ -30,7 +30,7 @@ function Sidebar() {
         <div className="sidebar-overlay" onClick={closeMenu}></div>
         <div className="sidebar-content">
           <div className="oliven-logo">
-            <a href="/">
+            <a href="/weddingWeb">
               <div className="logo-wrapper">
                 <img src={Logo} alt="Wedding Logo" loading="lazy" />
               </div>
