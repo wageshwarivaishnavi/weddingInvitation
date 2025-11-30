@@ -55,14 +55,14 @@ function Sidebar() {
                   <span className="menu-text">Home</span>
                 </a>
               </li>
-              {/* <li className="menu-item">
+              <li className="menu-item">
                 <a href="#organization" onClick={closeMenu}>
                   <span className="menu-icon">
                     <i className="ti-crown"></i>
                   </span>
                   <span className="menu-text">Vivaha Vaibhavam</span>
                 </a>
-              </li> */}
+              </li>
               <li className="menu-item">
                 <a href="#story" onClick={closeMenu}>
                   <span className="menu-icon">
