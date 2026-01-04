@@ -1,12 +1,9 @@
 {
   "files": {
     "main.css": "/weddingInvitation/static/css/main.9aa76f7f.css",
-    "main.js": "/weddingInvitation/static/js/main.372bc9ae.js",
+    "main.js": "/weddingInvitation/static/js/main.021e2470.js",
     "static/js/761.2afb8200.chunk.js": "/weddingInvitation/static/js/761.2afb8200.chunk.js",
     "static/js/248.e52b247d.chunk.js": "/weddingInvitation/static/js/248.e52b247d.chunk.js",
-    "static/css/34.8d0274cc.chunk.css": "/weddingInvitation/static/css/34.8d0274cc.chunk.css",
-    "static/js/34.f01ebfd8.chunk.js": "/weddingInvitation/static/js/34.f01ebfd8.chunk.js",
-    "static/js/886.d8b48138.chunk.js": "/weddingInvitation/static/js/886.d8b48138.chunk.js",
     "static/media/AajSeTeri.mp3": "/weddingInvitation/static/media/AajSeTeri.883ebfbfbd1762b19b32.mp3",
     "static/media/haldi.png": "/weddingInvitation/static/media/haldi.8e85160ed84c1190c778.png",
     "static/media/vidai.png": "/weddingInvitation/static/media/vidai.ddf8af6ff004ebea054c.png",
@@ -15,31 +12,18 @@
     "static/media/bharat.png": "/weddingInvitation/static/media/bharat.cb4ecf459884e2e21417.png",
     "static/media/sangeet.png": "/weddingInvitation/static/media/sangeet.b8a930bbfcfd4c5848a5.png",
     "static/media/mehndi.png": "/weddingInvitation/static/media/mehndi.c2b5c1058a31b79a41df.png",
-    "static/media/7.webp": "/weddingInvitation/static/media/7.2b0dd34ee1507e33a501.webp",
-    "static/media/12.webp": "/weddingInvitation/static/media/12.e77f6aef54a0b805f7bf.webp",
     "static/media/krishFarms.webp": "/weddingInvitation/static/media/krishFarms.762b48c86a75fb2c47c4.webp",
-    "static/media/10.webp": "/weddingInvitation/static/media/10.5f94f14e727da95bd2c2.webp",
-    "static/media/8.webp": "/weddingInvitation/static/media/8.59eca7c87a1bc7ce61b5.webp",
-    "static/media/9.webp": "/weddingInvitation/static/media/9.5076760ca11d2ae079f9.webp",
-    "static/media/11.webp": "/weddingInvitation/static/media/11.7274eb47e759cf4fa446.webp",
     "static/media/1.webp": "/weddingInvitation/static/media/1.6d0701974cfcf79f82fe.webp",
     "static/media/2.webp": "/weddingInvitation/static/media/2.d038b38cb90e29e33e45.webp",
-    "static/media/4.webp": "/weddingInvitation/static/media/4.67bb61282613b1aea583.webp",
-    "static/media/6.webp": "/weddingInvitation/static/media/6.79e99fbdbb1b08a0a8eb.webp",
     "static/media/location.webp": "/weddingInvitation/static/media/location.27d3e4eea3900761407c.webp",
-    "static/media/5.webp": "/weddingInvitation/static/media/5.44824c3e038fb02fc2e4.webp",
-    "static/media/3.webp": "/weddingInvitation/static/media/3.e80517b02771f38ff363.webp",
     "index.html": "/weddingInvitation/index.html",
     "main.9aa76f7f.css.map": "/weddingInvitation/static/css/main.9aa76f7f.css.map",
-    "main.372bc9ae.js.map": "/weddingInvitation/static/js/main.372bc9ae.js.map",
+    "main.021e2470.js.map": "/weddingInvitation/static/js/main.021e2470.js.map",
     "761.2afb8200.chunk.js.map": "/weddingInvitation/static/js/761.2afb8200.chunk.js.map",
-    "248.e52b247d.chunk.js.map": "/weddingInvitation/static/js/248.e52b247d.chunk.js.map",
-    "34.8d0274cc.chunk.css.map": "/weddingInvitation/static/css/34.8d0274cc.chunk.css.map",
-    "34.f01ebfd8.chunk.js.map": "/weddingInvitation/static/js/34.f01ebfd8.chunk.js.map",
-    "886.d8b48138.chunk.js.map": "/weddingInvitation/static/js/886.d8b48138.chunk.js.map"
+    "248.e52b247d.chunk.js.map": "/weddingInvitation/static/js/248.e52b247d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9aa76f7f.css",
-    "static/js/main.372bc9ae.js"
+    "static/js/main.021e2470.js"
   ]
 }
