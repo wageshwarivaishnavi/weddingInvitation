@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import Countdown from "./components/Countdown";
 import Footer from "./components/Footer";
 import BackgroundMusic from "./components/BackgroundMusic";
@@ -10,7 +10,6 @@ import Where from "./components/Where";
 
 const Organization = lazy(() => import("./components/Organization"));
 const RSVP = lazy(() => import("./components/RSVP"));
-const Gallery = lazy(() => import("./components/Gallery"));
 
 function App() {
   return (
@@ -23,11 +22,8 @@ function App() {
           <Organization />
         </Suspense>
         <Story />
-        <Suspense fallback={<div />}>
-          <Gallery />
-        </Suspense>
+        <Suspense fallback={<div />}></Suspense>
         <Countdown />
-
         <Where />
         <Footer />
       </div>

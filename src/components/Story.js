@@ -40,41 +40,6 @@ function Story() {
                 <span className="quote-mark-right">"</span>
               </div>
 
-              <div className="story-paragraphs">
-                <p className="story-lead">
-                  <span className="heart-icon">♥</span> Two people who feel like
-                  home to each other.
-                </p>
-
-                <p className="story-line">
-                  Who finish each other's fries and still argue about the last
-                  bite 🍟
-                </p>
-                <p className="story-line">
-                  Who turn ordinary days into unforgettable memories.
-                </p>
-                <p className="story-line">
-                  Who dream the same dreams and laugh at the same silly jokes.
-                </p>
-
-                <p className="story-line">
-                  Who understand each other's silence better than anyone's
-                  words.
-                </p>
-                <p className="story-line">
-                  Who see the world in the same shade of happy, even on the
-                  tough days.
-                </p>
-                <p className="story-line">
-                  Who hold hands through chaos and dance through calm.
-                </p>
-
-                <p className="story-lead">
-                  <span className="heart-icon">♥</span> Who are ready to build a
-                  lifetime together, heart to heart, soul to soul
-                </p>
-              </div>
-
               <div className="story-divider">
                 <span className="divider-line-left"></span>
                 <span className="divider-heart">♥</span>
